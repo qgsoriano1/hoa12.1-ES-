@@ -1,6 +1,7 @@
 ---
 
 - hosts: all
+  become: true
   vars:
     allowed_ssh_networks:
       - 192.168.122.0/24
@@ -10,7 +11,7 @@
 
     unnecessary_services:
       - postfix
-      - telnet
+      - telnetd
 
     unnecessary_software:
       - tcpdump
